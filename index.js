@@ -208,9 +208,13 @@ window.onload = () => {
           parseFloat(vertices[face[3]].x),
           parseFloat(vertices[face[3]].y),
         );
-        if ([1, 3].includes(index)) {
+        if (index === 1) {
           grad.addColorStop(0, 'orange');
           grad.addColorStop(1, 'orange');
+        }
+        else if (index === 3) {
+          grad.addColorStop(0, 'red');
+          grad.addColorStop(1, 'red');
         } else {
           grad.addColorStop(0, 'orange');
           grad.addColorStop(1, 'red');
