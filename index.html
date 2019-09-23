@@ -6,9 +6,72 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>3D cube</title>
     <link href="styles.css" rel="stylesheet" type="text/css" />
-    <script src="index.js" type="text/javascript"></script>
+    <script src="cube.js" type="text/javascript"></script>
   </head>
   <body>
-    <canvas id="root">Canvas</canvas>
+    <img class="image" src="background.jpeg" alt="background" />
+    <canvas class="canvas" id="background">Background</canvas>
+    <canvas class="canvas" id="cube">Cube</canvas>
+    <button id="open-form-button" class="open-button" type="button">Open</button>
+    <aside id="form-container">
+      <button id="close-form-button" class="close-button" type="button">Close</button>
+      <form id="form">
+        <fieldset>
+          <label>
+            Размер куба
+            <input class="number-input" id="size" type="range" min="0" max="200" />
+          </label>
+          <label>
+            Отдаление камеры
+            <input class="number-input" id="focal-length" type="range" min="100" max="900" />
+          </label>
+        </fieldset>
+        <fieldset>
+          <label>
+            Включить левитацию
+            <input class="checkbox-input" checked id="float" type="checkbox" />
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Цвета</legend>
+          <label>
+            Цвет 1: <input class="color-input" id="start-color" type="color" value="#ffa500" />
+          </label>
+          <label>
+            Цвет 2: <input class="color-input" id="end-color" type="color" value="#ff0000" />
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Фон</legend>
+          <label>
+            Цвет:
+            <input class="color-input" id="background-color" type="color" value="#eeeeee" />
+          </label>
+          <label>
+            Радиус:
+            <input
+              class="number-input"
+              id="stars-radius"
+              type="number"
+              value="2"
+              min="0"
+              max="10"
+            />
+          </label>
+          <label>
+            Количество:
+            <input
+              class="number-input"
+              id="stars-amount"
+              type="number"
+              value="10"
+              min="0"
+              max="15"
+            />
+          </label>
+        </fieldset>
+      </form>
+    </aside>
+    <script src="background.js" type="text/javascript"></script>
   </body>
 </html>
